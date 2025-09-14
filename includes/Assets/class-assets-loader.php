@@ -4,7 +4,10 @@ class RRP_Assets_Loader {
         add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_assets' ] );
     }
 
-    public function enqueue_admin_assets() {
+    public function enqueue_admin_assets( $hook) {
+        if('toplevel_page_react-powered-plugin' !== $hook) {
+            return;
+        }
         wp_enqueue_script(
             'rpp-admin-script',
             RPP_PLUGIN_URL . 'dist/index.js',

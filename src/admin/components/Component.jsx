@@ -1,6 +1,6 @@
 function Component() {
     return (
-        <h4>This is Text Component</h4>
+        <h4>This is Text Component for creating custom dashboard</h4>
     )
 }
 
