@@ -29,6 +29,7 @@ function UseEffect() {
             return null;
         }
     };
+    if (!data) return <p>Loading...</p>;
     return (
         <div>
             <form>
