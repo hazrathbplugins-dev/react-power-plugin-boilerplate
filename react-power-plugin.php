@@ -26,4 +26,5 @@ React_Powered_plugin_Loader::init();
 
 register_activation_hook( __FILE__, ['React_Powered_Plugin_Activation', 'activate']);
 register_activation_hook( __FILE__, ['React_Powered_Plugin_Deactivaton', 'deactivate']);
+
 ?>

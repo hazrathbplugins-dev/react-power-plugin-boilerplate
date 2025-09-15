@@ -2,6 +2,7 @@ import { HashRouter as Router, Routes, Route, Link, Outlet, useLocation } from "
 import UseEffect from "./components/Useeffect";
 import '../styles/admin.scss';
 import PostDetails from "./components/PostDetails";
+import CreateUser from "./components/CreateUser";
 
 function Dashboard() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function RouterTest() {
     <Router>
       <Routes>
         <Route path="/" element={<Dashboard />}>
-          <Route path="users" element={<p>Users content</p>} />
+          <Route path="users" element={<CreateUser />} />
           <Route path="posts" element={<UseEffect />} />
           <Route path="users/:userId" element={<PostDetails />} />
         </Route>

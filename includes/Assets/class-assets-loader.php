@@ -11,7 +11,7 @@ class RRP_Assets_Loader {
         wp_enqueue_script(
             'rpp-admin-script',
             RPP_PLUGIN_URL . 'dist/index.js',
-            [ ],
+            [ 'jquery' ],
             RPP_VERSION,
             true
         );
@@ -21,6 +21,14 @@ class RRP_Assets_Loader {
             RPP_PLUGIN_URL . 'dist/admin.css',
             [],
             RPP_VERSION
+        );
+        wp_localize_script(
+            'rpp-admin-script',
+            'submittedData',
+            [
+                'ajax_url' => admin_url('admin-ajax.php'),
+                'nonce'    => wp_create_nonce('form-submission'),
+            ]
         );
     }
 }
